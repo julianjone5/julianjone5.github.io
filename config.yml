@@ -1,0 +1,63 @@
+# --- Site identity -----------------------------------------------------------
+title: Julian Jones
+description: >-
+  Notes on problems I ran into and how I solved them — compute, hardware,
+  and side projects.
+url: "https://julianjone5.github.io"
+baseurl: ""
+
+# Optional. Delete these lines if you'd rather not publish them.
+author: Julian Jones
+# email: you@example.com
+github_username: julianjone5
+
+# --- Theme -------------------------------------------------------------------
+theme: minima
+
+minima:
+  # Options: classic, dark, solarized-dark, solarized
+  skin: classic
+  # Show post previews on the homepage instead of just a list of titles.
+  # date_format: "%b %-d, %Y"
+
+# Links in the header nav. Any page with `title:` in its front matter is
+# eligible; this list controls order and which ones appear.
+header_pages:
+  - about.md
+
+show_excerpts: true
+
+# --- Plugins -----------------------------------------------------------------
+# These three are on GitHub Pages' supported list, so they work with the
+# "deploy from a branch" setup with no extra configuration.
+plugins:
+  - jekyll-feed      # generates /feed.xml for RSS readers
+  - jekyll-seo-tag   # meta + Open Graph tags, which is what search picks up
+  - jekyll-sitemap   # generates /sitemap.xml
+
+# --- Build behaviour ---------------------------------------------------------
+markdown: kramdown
+permalink: /:year/:month/:day/:title/
+
+# Keep source files, project code, and binaries out of the built site.
+# Jekyll copies anything it doesn't recognise straight into the output, so
+# without this your CAD folder ends up published as part of the site.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - node_modules
+  - README.md
+  - LICENSE
+  - projects/        # per-project code, schematics, CAD
+  - "*.stl"
+  - "*.step"
+  - "*.stp"
+  - "*.f3d"
+  - "*.3mf"
+  - "*.zip"
+
+# Files here are copied to the site verbatim without Jekyll trying to render
+# them. Use this instead of `exclude` for things you DO want downloadable.
+# include:
+#   - files/
