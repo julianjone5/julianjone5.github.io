@@ -37,7 +37,7 @@ plugins:
 
 # --- Build behaviour ---------------------------------------------------------
 markdown: kramdown
-permalink: /:year/:month/:day/:title/
+permalink: /posts/:title/
 
 # Keep source files, project code, and binaries out of the built site.
 # Jekyll copies anything it doesn't recognise straight into the output, so
