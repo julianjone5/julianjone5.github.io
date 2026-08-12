@@ -41,7 +41,7 @@ pulling: about **1 kgf to lower, 2.5 kgf to raise**. Raising needs roughly twice
 torque. That single number decides whether a given servo is viable, and it's worth ten
 minutes with a luggage scale before you commit to a part.
 
-The servo I used is rated 6 kg-cm stall at 6 V. On 4 AA alkalines it lowers the blind
+The [servo I used](https://m.media-amazon.com/images/I/61XwTEaryVL.pdf) is rated 6 kg-cm stall at 6 V. On 4 AA alkalines it lowers the blind
 easily and raises it with visible effort — enough margin to work, not enough to be
 comfortable. The fix I'm leaning toward is a 2:1 reduction between servo and sprocket,
 trading speed I don't need for torque I do.
@@ -69,7 +69,7 @@ The circuit:
 - **D8** driving the gate of a low-side N-channel MOSFET that switches the servo's ground,
   through a 330 Ω series resistor, with a 10 kΩ pulldown to keep the gate defined while the
   chip sleeps
-- A 1N4007 in the Vcc line and a 100 nF ceramic at the chip
+- A [1N4007](https://www.mouser.com/datasheet/2/149/1N4007-888322.pdf) in the Vcc line and a 100 nF ceramic at the chip
 
 The MOSFET exists purely for battery life. A servo left connected idles at a few milliamps
 forever, which on a device that actually moves for maybe a minute a day is the dominant
